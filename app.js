@@ -44,7 +44,8 @@ console.log("Printing a value of name");
    * we can reassign this value
    * 
    * const on the other hand cannot be reassigned
-   * 
+   * use const when you want others to know that this variable
+   * value should not be altered
    */
 
 const person = {
@@ -54,3 +55,9 @@ const person = {
 };
 
 console.log(person);
+
+const numbers = [
+    1,2,3,4,5,6,7,8,9,10
+];
+
+console.log(numbers);
