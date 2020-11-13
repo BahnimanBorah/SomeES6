@@ -52,7 +52,7 @@ const person = {
     name: 'Bahniman Borah',
     occupation: 'Software Engineer',
     dateOfJoining: '03-06-2019'
-};
+}; // this is an object literal
 
 console.log(person);
 
@@ -61,3 +61,16 @@ const numbers = [
 ];
 
 console.log(numbers);
+
+/**
+ * There are 6 primitive data types in javascript
+ * String, number, Boolean, Null, Undefined, Symbols (ES6)
+ */
+
+ const guy = 'Arjun';
+ console.log(typeof guy);
+
+ const today = new Date();
+ console.log(today);
+
+ // value.length - length only works on strings
