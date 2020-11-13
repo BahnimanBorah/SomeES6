@@ -73,4 +73,40 @@ console.log(numbers);
  const today = new Date();
  console.log(today);
 
- // value.length - length only works on strings
+/* 
+value.length - length only works on strings
+value.toFixed() - it will convert to a number
+parseInt('100') - all convert string to number
+similarly parseFloat('100.00')
+value.toFixed(x) will give us x decimal points
+*/
+ /**
+  * toString() to convert things to string
+  * 
+  */
+
+  /**
+   * 
+   * Math object
+   * 
+   */
+
+const num1 = 100;
+const num2 = 50;
+let val;
+
+val = num1 + num2;
+val = Math.PI.toFixed(4);
+
+val = Math.round(2.4);
+// Math.ceil(2.4);
+// Math.florr(2.8);
+// Math.sqrt(64);
+// Math.abs(-3); gives positive number always
+// Math.pow(8,2);
+// Math.min(x,y,z,..) returns the minimum number - similar max function
+// Math.random() - gives us a random decimal
+// Math.random() * 20 + 1 will give us 1 to 20 
+// Math.floor(Math.random()*20+1); to remove decimal
+//output
+console.log(val);
