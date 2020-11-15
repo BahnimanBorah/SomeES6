@@ -11,6 +11,7 @@ const person = {
     },
     getDOB: function(){
         return 1996;
+        //or currentYear - this.age';
     }
 
 };

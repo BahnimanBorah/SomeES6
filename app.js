@@ -157,14 +157,14 @@ value.toFixed(x) will give us x decimal points
  const title ="The Welcome Page";
  const message = "this is a ES6 and regular JavaScript tutorial";
  const author = "Bahniman Borah";
- const today = new Date();
+ const today1 = new Date();
 
  let html = `
  <ul>
  <li>Title: ${title}</li>
  <li>Message: ${message}</li>
  <li>Author: ${author}</li>
- <li>Date: ${today}</li>
+ <li>Date: ${today1}</li>
  <li>${ author.length > 10 ? 'author has a long name' : 'good name author !'}</li>
  </ul>
  `;
