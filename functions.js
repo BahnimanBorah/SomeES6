@@ -64,3 +64,11 @@ const todo = {
 todo.add();
 todo.edit(7);
 todo.delete(7);
+
+
+/**
+ * 
+ * Arrow functions is missing ..
+ * a
+ */
+console.log("hello goken !");
