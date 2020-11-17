@@ -353,8 +353,87 @@ eg - button.addEventListener('click', deleteTask);
 function deleteTast(event){
     console.log('Delete the task');
 
-    we can also print the event object - it will give us details about the element
+    we can also print the event object - it will give us details about the element or event
 }
 
 
+*/
+
+/*
+MOUSE EVENTS
+
+const clearBtn = document.querySelector('.clear-tasts')
+const card = document.querySelector('.card');
+const heading = document.querySelector('h5')
+
+creating an event handler
+
+function runEvent(event){
+    console.log(`event type is ${event.type}`);
+}
+
+clearBtn.addEventListener('click', runEvent);
+'dblclick','mouseDown',mouseup, mouseenter, mouseover, mouseout, mousemove
+these mouse events can be used to create something really really interactive
+
+
+*/
+
+/*
+KEYBOARD EVENTS
+
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
+
+form.addEventListener('submit', runEvent);
+similarly tastInput.addEventListener('keydown',runEvent); - when key is pressed down
+
+function runEvent(event){
+    //do something
+    console.log(e.target.value); - target is the element where event is fired
+}
+*/
+let card = document.querySelector('.card');
+let taskInput = document.querySelector('.taskInput');
+let addButton = document.querySelector('.addbtn');
+const taskList = document.querySelector('.taskList');
+let headingtask = document.querySelector('.TaskHeading');
+
+taskInput.setAttribute('placeholder','Add a new task');
+taskInput.style.width = '300px';
+addButton.style.backgroundColor = 'lightblue';
+
+addButton.addEventListener('mouseover', function(event){
+    addButton.style.backgroundColor = 'yellow';
+});
+addButton.addEventListener('mouseout', function(event){
+    addButton.style.backgroundColor = 'lightblue';
+});
+
+card.style.height = '100px';
+card.style.padding = '5px';
+
+function addNewTask(e){
+    const li = document.createElement('li');
+    li.className = 'task-item';
+    const text = document.createTextNode(taskInput.value);
+    li.appendChild(text);
+    taskList.appendChild(li);
+
+}
+
+// function showWhatsTyping(e){
+//     headingtask.innerText = e.target.value;
+// }
+
+// taskInput.addEventListener('keydown', showWhatsTyping);
+
+addButton.addEventListener('click', addNewTask);
+
+/*
+some more examples of addEventListener
+
+keypress, focus, blur, cut, paste, input
+
+CHANGE EVENT - usually used with a select list
 */
