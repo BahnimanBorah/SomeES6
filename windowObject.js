@@ -25,5 +25,13 @@
  * outerHeight, outerwidth
  * scrollY, scrollX
  * Innerheigh, innerwidth
+ * location - hostname,port,hret,search
+ * 
+ * href can be used to go to any URL
+ * window.history.go() - history object - use go(-1) to go back to previous page
+ * 
+ * Navigoator object
+ * navigator - appName, appVarsion, userAgent, platform, vendor, language
+ * 
  * 
  */

@@ -212,3 +212,149 @@ value.toFixed(x) will give us x decimal points
   * 
   * val = numbers.find(under50); - numbers is array here
   */
+
+  /**
+   * document object
+   * 
+   * document - all, all.length, head, body, doctype, domain, URL, characterSet,
+   * 
+   * we can access all forms in document using document.forms[] array 0,1,2 etc
+   * 
+   * we can get same with document.images, document.scripts, 
+   */
+
+
+/**
+ * DOM Selectors 
+ * 
+ * 1)getElementById() - remember we can use document object to change anything real time
+ * 
+ * always better to create a variable and then get the document.element to manipulate
+ * 
+ * 2) querySelector() - use as document.querySelector(#id)
+ *  document.querySelector(.classname)
+ * document.querySelector(h5) - will get 1st h5 tag
+ * if more than 1 h5 and you still want to select then we can use css3 code
+ * 
+ * document.querySelector('li:nth-child(2)') - will get us the 3rd li tag
+ * 
+ * document.querySelector('li:nth-child(odd or even)') then you need to use document.querySelectorAll()
+ * 
+ * 
+ * 3) document.getElementsByClassName(className) - it will give all elements of that particular class name
+ *  
+ * we can also mix this with querySelector() - eg 
+ * 
+ * let val = document.querySelector('ul').getElementsByClassName('className') - will give us the UL elements with the class name of classNAME
+ * 
+ * 4) document.getElementsByTagName('ul') - also usable but I personally don't see any usefulness
+ * 
+ * 5) document.querySelectorAll('ul') - 
+ * 
+ * if we do querySelectorAll() - it already changes into a node list - same like array
+ * 
+ * 
+ */
+
+ /**
+  * Travaersing the DOM
+  * 
+  * get some element using document.querySelector('ul.collection') - this one will get ul - list with classname=collection
+  * 
+  * line-breaks introduces text-nodes which are nothing but line-break between 2 tags
+  * 
+  * list.childNodes will give us everything , not just the elements
+  * list.children will give us only the elements - better use this 
+  * 
+  * 
+  * this childNode and children will be useful when we have nested elements
+  * 
+  * to get siblings inside parentelement use = listItem.nextElementSibling
+  * 
+  * 
+  * 
+  */
+
+/*
+Creating an element in the DOM
+
+const li = document.createElement('li');
+
+li.className = 'collection';
+li.id = 'list-item';
+
+li.appendChild(document.createTextNode('message'));
+
+document.querySelector('ul.collection').appendChild(li);
+
+*/
+
+/*
+Replacing elements 
+eg - replace h5 with h2
+
+const newHeading = document.createElement('h2');
+newHeading.id = 'task=title';
+
+newHeading.appendChild(document.createTextNode('Task list'));
+
+const oldHeading = document.getElementById('task-title');
+
+//parent element
+const cardAction = document.querySelector('.tast-title');
+
+cardAction.replaceChild(oldHeading, newHeading);
+*/
+
+/*
+Remove element
+
+getting all list items
+
+const lis = document.querySekectorAll('li');
+const list = document.querySelector('ul');
+
+lis[0].remove();
+list.removeChild(lis[3]);
+
+*/
+
+/*
+Classes and Attributes
+
+const firstLi = document.querySelector('li:first-child');
+
+const link = firstLi.children[0];
+
+val = link.className'
+val = link.classList; or link.classList[0];
+link.classList.add('test') - this way we can add a new class in element
+
+console.log(val);
+*/
+
+/*
+EVENT LISTENING
+
+const button = document.querySelector('.clearTaskButton');
+button.addEventListener('click',function(){
+    console.log('Event fired !');
+});
+
+we can also pass an event object into the callback function 
+
+button.addEventListener('click', function(event){
+    event.preventDefault(); - suppose the button is a link - thus on clicking the button it would try to re-direct to some URl that is available in its href attribute, but using this method will prevent the link to behave that way
+    or we can have a # in the href attribute
+});
+
+we can also pass pre-defined functions instead of creating the callback method right there
+eg - button.addEventListener('click', deleteTask);
+function deleteTast(event){
+    console.log('Delete the task');
+
+    we can also print the event object - it will give us details about the element
+}
+
+
+*/
